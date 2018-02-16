@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# ls environment variables
+export CLICOLOR=1                       # enable colors
+export LSCOLORS=GxFxCxDxBxegedabagacad  # define colors
+
+# text editors
+export EDITOR=emacs # command line editor
+export GEDITOR=atom # gui editor
+
+# bash history variables
+export HISTCONTROL=ignoredups   # ignore duplicate commands
+export HISTSIZE=10000           # increase memory capacity (default: 500)
+export HISTFILESIZE=10000       # increase file capacity (default: 500)
+
+# custom ps1
+UNCOLOR="\[\e[00;32m\]" # green
+SECOLOR="\[\e[00;37m\]" # white
+CACOLOR="\[\e[00;31m\]" # red
+ETCOLOR="\[\e[0m\]"     # end color tag
+
+USR="\u"    # user
+SEP=" ::: " # just a separator string
+CAR=">"     # caret
+BAS="\W"    # current directory
+
+export PS1="${UNCOLOR}${USR}${ETCOLOR}${SECOLOR}${SEP}${ETCOLOR}${CACOLOR}[${BAS}${CAR}${ETCOLOR} "
+
+# paths
+export NVM_DIR="$HOME/.nvm"

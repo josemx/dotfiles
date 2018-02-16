@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# case-insensitive tab autocompletion
+set completion-ignore-case on
+
+# auto list tab completions
+# set show-all-if-ambiguous on
+
+# tab cycle through possible completions
+"\t": menu-complete
+# shift-tab reverse cycle through possible completions
+"\e[Z": "\e-1\C-i"
+
+# enable arrow search
+"\e[A": history-search-backward
+"\e[B": history-search-forward
